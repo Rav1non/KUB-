@@ -341,9 +341,9 @@ async def ping(client, message):
     ping_time = (end_time - start_time) / 1e6
     
     if ping:
-        msg = await client.send_photo(message.chat.id, url, caption=f"**KUB**n**Version: 1.3 for dev 🐈**n**Developer:** @rav1non\n**Telegram ping:** {ping} ms")
+        msg = await client.send_photo(message.chat.id, url, caption=f"**KUB**n**Version: 1.0 for all 🐈**n**Developer:** @rav1non\n**Telegram ping:** {ping} ms")
     else:
-        msg = await client.send_photo(message.chat.id, url, caption=f"**KUB**\n**Version: 1.3 for dev 🐈**\n**Developer:** @rav1non\n**Telegram ping:** {ping_time:.3f} ms")
+        msg = await client.send_photo(message.chat.id, url, caption=f"**KUB**\n**Version: 1.0 for all 🐈**\n**Developer:** @rav1non\n**Telegram ping:** {ping_time:.3f} ms")
     
     await message.delete()
     
