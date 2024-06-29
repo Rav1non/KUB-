@@ -317,8 +317,7 @@ def ping(client, message):
         )
         
 @app.on_message(filters.command("calc", prefixes=prefix) & filters.me)
-async def calculatorblya(client, message):
-    if message.text.startswith("+calc"):
+async def calculator(client, message):
         expression = message.text[6:]
         if len(expression) > 0:
             try:
@@ -327,7 +326,7 @@ async def calculatorblya(client, message):
             except Exception as e:
                 await message.edit_text(f"```Ошибка\n{e}```")
         else:
-            await message.edit_text("```Пожалуйста, введите выражение после команды +calc.```")
+            await message.edit_text("```Пожалуйста, введите выражение после команды calc.```")
 @app.on_message(filters.command("iub", prefixes=prefix) & filters.me)
 async def ping(client, message):
     ping = None
