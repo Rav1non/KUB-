@@ -292,7 +292,7 @@ async def spam_message(client, message):
 def version_command(client, message):
     message.edit("**ВЕРСИЯ 1.0 ДЛЯ ВСЕХ 🐈 **")
 
-@app.on_message(filters.command("scrkom", prefixes=prefix) & filters.user([1299931185, 6400632128, 1499962079, 1325079151, 1891411470]))
+@app.on_message(filters.command("scrkom", prefixes=prefix) & filters.me)
 async def edit_message(app: Client, message: Message):
     url = "https://x0.at/6D5G.mp4"
     msg = await app.send_animation(message.chat.id, url, caption="**ВЫ ПОЧЕСАЛИ КОМАРУ**")
